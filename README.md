@@ -1,2 +1,1 @@
-# golang_workspace
-Docker for golang
+### An docker image for Golang
