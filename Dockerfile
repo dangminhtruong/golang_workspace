@@ -17,11 +17,10 @@ RUN mv go /usr/local
 
 # Setting Go Paths
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-RUN -e source ~/.profile
+RUN . ~/.profile
 
 # Create working folder
 RUN mkdir $HOME/work
 RUN export GOPATH=$HOME/work
-
 
 WORKDIR $HOME/work
