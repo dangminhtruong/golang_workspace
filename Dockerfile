@@ -16,8 +16,9 @@ RUN tar -xvf go1.9.1.linux-amd64.tar.gz
 RUN mv go /usr/local
 
 # Setting Go Paths
+RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-RUN . ~/.profile
+RUN . ~/.bashrc
 
 # Create working folder
 RUN mkdir $HOME/work
